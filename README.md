@@ -371,3 +371,9 @@ http://apps.getpebble.com/en_US/application/556b65b8389795176b000042
 - Adam Fisher
 - Tom Wirschell
 - Joerg Stephan
+
+
+require 'json'
+require 'yaml'
+data = YAML::load(File.open('./cloudformation/owasp-security-knowledge-framework.template.yaml'))
+File.open('owasp-security-knowledge-framework.template', 'w+'){|f| f.puts json }
